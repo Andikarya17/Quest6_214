@@ -21,6 +21,12 @@ fun FormSiswa(
                 )
             )
         }
-    )
+    ){ isiruang ->
 
+        Column(
+            modifier = Modifier.padding(paddingValues = isiruang),
+            verticalArrangement = Arrangement.SpaceBetween,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+        }
 }
