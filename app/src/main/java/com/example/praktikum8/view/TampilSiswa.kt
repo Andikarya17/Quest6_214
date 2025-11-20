@@ -53,7 +53,16 @@ fun TampilSiswa(
                     Divider(thickness = 1.dp)
                 }
             }
+            Spacer(modifier = Modifier.height(10.dp))
 
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                onClick = onBackButtonClicked
+            ) {
+                Text(text = stringResource(id = R.string.back))
+            }
 
+        }
+    }
 
         }
