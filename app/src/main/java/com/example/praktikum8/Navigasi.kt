@@ -30,6 +30,7 @@ fun SiswaApp(
     viewModel: SiswaViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ) {
+
     Scaffold { isiRuang ->
 
         val uiState = viewModel.statusUI.collectAsState()
@@ -54,6 +55,7 @@ fun SiswaApp(
                     }
                 )
             }
+
             composable(route = Navigasi.Detail.name) {
 
                 TampilSiswa(
@@ -64,18 +66,14 @@ fun SiswaApp(
                 )
             }
         }
-
     }
+}
 
-    private fun cancelAndBackToFormulir(
-        navController: NavHostController
-    ) {
-        navController.popBackStack(
-            route = Navigasi.Formulir.name,
-            inclusive = false
-        )
-    }
-
-
-
+private fun cancelAndBackToFormulir(
+    navController: NavHostController
+) {
+    navController.popBackStack(
+        route = Navigasi.Formulir.name,
+        inclusive = false
+    )
 }
